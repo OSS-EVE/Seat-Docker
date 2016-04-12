@@ -59,7 +59,8 @@ RUN chmod +x /var/www/seat/update.sh
 RUN chown -R www-data:www-data /var/www/seat
 RUN chmod -R guo+w /var/www/seat/storage/
 
-RUN supervisord -k -c /etc/supervisor/supervisord.conf
+# doesnt work with some host filesystems...
+#RUN supervisord -k -c /etc/supervisor/supervisord.conf
 
 EXPOSE 80
 
