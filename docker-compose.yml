@@ -4,16 +4,12 @@ mysql:
     MYSQL_DATABASE: seat
     MYSQL_USER: seat
     MYSQL_PASSWORD: seat_mysql
-    MYSQL_ROOT_PASSWORD: p4oss
 
 redis:
   image: redis
 
 seat:
   build: .
-  environment:
-    APACHE_DOCUMENT_ROOT: /app/public
-    APACHE_SERVER_NAME: seat.oss.rocks
   links:
     - mysql:mysql
     - redis:redis
