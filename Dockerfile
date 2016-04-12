@@ -36,6 +36,7 @@ COPY seat_supervisor.conf /etc/supervisor/conf.d/seat.conf
 WORKDIR /var/www/seat/
 
 # This is for compliance until our pull request is merged
+COPY dev/config/database.php /var/www/seat/config/database.php
 COPY dev/composer.json /var/www/seat/composer.json
 COPY dev/app/Http/Kernel.php /var/www/seat/app/Http/Kernel.php
 COPY dev/config/app.php /var/www/seat/config/app.php
