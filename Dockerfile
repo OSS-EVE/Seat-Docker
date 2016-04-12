@@ -65,4 +65,7 @@ RUN chmod -R guo+w /var/www/seat/storage/
 
 EXPOSE 80
 
+# disable autostart, we want to start our own
+RUN update-rc.d -f  apache2 remove
+
 CMD /usr/sbin/apache2ctl -D FOREGROUND
